@@ -1,0 +1,11 @@
+1 Passo > Criar um disco (est-forense) com 15 GB e formato NTFS na estação forense
+2 Passo > Criar um disco (hd-ext) com 15 GB e formato ext4 autônomo (não vinculado à nenhuma VM)
+3 Passo > Iniciar a VM WXP com o LiveCD FDTK
+4 Passo > Montar o disco hd-ext no FDTK
+5 Passo > Executar o rdd (ou dc3dd) e criar uma imagem do dispositivo /dev/sda1 em formato .img dentro do disco hd-ext, com hash md5 (ou sha1)
+6 Passo > Desmontar o disco hd-ext do FDTK
+7 Passo > Parar a VM WXP e iniciar a estação forense alocando o hd-ext à VM
+8 Passo > Montar o hd-ext na estação forense
+9 Passo > Executar o rdd (ou dc3dd) para verificar o hash md5 (ou sha1)
+10 Passo > Ainda com o rdd (ou dc3dd) realizar o processo inverso de montar a imagem .img dentro do disco est-forense com formato NTFS
+
